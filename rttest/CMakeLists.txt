@@ -89,12 +89,12 @@ else()
   set(rttest_INCLUDE_DIR ${CMAKE_INSTALL_PREFIX}/include)
   set(rttest_LIB_DIR ${CMAKE_INSTALL_PREFIX}/lib)
   set(rttest_CMAKE_DIR
-    ${CMAKE_INSTALL_PREFIX}/share/${CMAKE_PROJECT_NAME}/CMake)
-  configure_file(${CMAKE_PROJECT_NAME}Config.cmake.in
-    ${CMAKE_BINARY_DIR}/InstallFiles/${CMAKE_PROJECT_NAME}Config.cmake
+    ${CMAKE_INSTALL_PREFIX}/share/${PROJECT_NAME}/CMake)
+  configure_file(${PROJECT_NAME}Config.cmake.in
+    ${CMAKE_BINARY_DIR}/InstallFiles/${PROJECT_NAME}Config.cmake
     @ONLY)
   install(FILES
-    ${CMAKE_BINARY_DIR}/InstallFiles/${CMAKE_PROJECT_NAME}Config.cmake
+    ${CMAKE_BINARY_DIR}/InstallFiles/${PROJECT_NAME}Config.cmake
     DESTINATION ${rttest_CMAKE_DIR})
 
 endif()
